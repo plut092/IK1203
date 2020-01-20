@@ -1,0 +1,93 @@
+1.
+    a) Protocols define 'format and order' of 'messages sent and 
+    recieved' among network entities, and 'actions taken' on 
+    message transmission and reception.
+
+    b)  - application layer
+            HTTP, FTP
+        - transport layer
+            TCP, UDP
+        - network layer
+            IP, Routing
+        - link layer
+            Ethernet, IEEE 802.11 WLAN
+        - physical layer
+            Bit coding, TP cat 6
+
+    c) link layer
+
+    d)  routing: determines source-destination route taken by 
+        packets
+        
+        forwarding: move packets from router's input to appropriate 
+        out link
+
+    e) Provides communication between application processes on 
+    different hosts
+
+2.  1) UA, of the sender, sends message to it's outgoing mail server where
+    it's placed in a message queue.
+
+    2) The client side of SMTP, the outgoing mail server, opens a 
+    TCP connection with the server side of SMTP, the incoming mail server
+    of the reciever.
+
+    3) The SMTP client sends the queued message over the TCP connection.
+
+    4) The incoming server places the message in the reciever UA,
+    recievers mailbox.
+
+3.  a) TCP on port 25
+
+    b) T = 2.5ms * (7 + (antal rader i meddelande + 1))
+
+    c) T = 2.5ms * ((7 +(3*2)) + (antal rader i meddelande + 1))
+
+4.  No. Before sending a line of mail text, the SMTP client checks the 
+    first character of the line. If it is a period, one additional period
+    is inserted at the beginning of the line.
+
+5.  a) http://www.kth.se/
+    
+    b) 200 OK, yes it was successful
+
+    c) 60044
+
+    d) HTTP keep-alive, a.k.a., HTTP persistent connection, is an 
+    instruction that allows a single TCP connection to remain open 
+    for multiple HTTP requests/responses.
+    Enabling the keep-alive header allows you to serve all web
+    page resources over a single connection. Keep-alive also reduces 
+    both CPU and memory usage on your server.
+
+    The server uses the Connection: close
+    header line to tell the client that it is going to close the TCP 
+    connection after sending the message.
+
+    e) <html
+
+6.  a) Tit-for-tat is the incentive mechanism and works as follows:
+        Priority is given to the neighbors that currently is supplying
+        the highest data rate.
+
+        The 4 neighbors which is feeding the most data will be unchoked
+        and other neighbors will be choked i.e that neighbor will not be 
+        supplied data.
+
+        Also, every 30 seconds a new neighbor is optimistically unchoked
+        so that the new neighbor can supply its data rate and if it is
+        higher than the top 4 is will take the lowest-rate suppliers spot.
+
+    b) The rarest chunk is a chunk of data that is determined by the peers
+    by comparing the chunks they have. The chunk that the fewest peers
+    have is the rarest chunk and will be prioritised to be shared first.
+
+    This is to try and get that chunk distrubuted quicker and to try to
+    reach a equilibrium of the data chunks amongst the 
+    peers so that if the peer/peers that have the rarest chunk dont 
+    disconnects and the chunk is unreachable by the online users.
+
+    The two advantages are:
+    1. quicker desttribution of that chunk
+    2. making sure that the rarest chunks will be obtainable in the 
+       network.
