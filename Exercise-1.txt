@@ -91,3 +91,61 @@
     1. quicker desttribution of that chunk
     2. making sure that the rarest chunks will be obtainable in the 
        network.
+
+7.  a) 
+        1. Requesting host asks the local DNS server for punchy.fws.com
+        2. Either the local DNS server has punchy.fws.com in cache
+        and can provide it OR the local DNS server will ask the root 
+        DNS server.
+        3. The root DNS server only has the IP:s to the TLD DNS servers.
+        And will answer with the address to the .com TLD DNS server.
+        4. The local DNS server will query the .com TLD DNS server  
+        for the address to punchy.fws.com.
+        5. TLD DNS server for .com does not have punchy.fws.com stored 
+        and will answer the query with the IP-address to fws.com.
+        6. The local DNS server querys thefws.com authorative DNS server 
+        for punchy.fws.com.
+        7. The authorative DNS server for fws.com will answer the query 
+        with the IP to punchy.fws.com.
+        8. The local DNS server will store punchy.fws.com in cache and 
+        answer the requesting host with the IP address to punchy.fws.com.
+
+    b)  - The querys from the local DNS server is recursive
+        - Querys at the root/TLD/authorative DNS servers is iterative
+
+    c)  Yes, the IP-address is the same in the different RR.
+
+    d)  400 - Bad Request
+
+8.  IP version 4 address for “www.kth.se”           type=A
+    IP version 6 address for “www.kth.se”           type=AAAA
+    TCP port number for HTTP server at “www.kth.se” type=???
+    Incoming mail server for “kth.se”               type=A
+    Outgoing mail server for “kth.se”               type=MX
+    Authoritative name server for “kth.se”          type=NS
+    Web server for “kth.se”                         type=A
+    Main (canonical) name for alias “www.kth.se”    type=CNAME
+    Host name with address “130.237.28.40”          type=A
+    
+P2  D_end-end - end to end delay
+    L          - length
+    N          - number of links
+    R          - transmission rate
+    
+
+    D_end-end=N*L/R     - of sending one packet
+    
+    (N+(P-1))(L/R)
+    
+P6
+    T = N*T_t + N*T_p + (N-1)*T_r
+    a)  T_p = d/s
+    b)  T_t = L/R
+    c)  T = N*T_t + N*T_p + (N-1)*T_r
+    d)  Just sent from host A/on the link
+    e)  On the link
+    f)  It's at host B
+    g)  L/R = d/s -> d = s(L/R) => 535km
+
+P7  
+
