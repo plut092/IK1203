@@ -119,13 +119,13 @@
 
 8.  IP version 4 address for “www.kth.se”           type=A
     IP version 6 address for “www.kth.se”           type=AAAA
-    TCP port number for HTTP server at “www.kth.se” type=???
+    TCP port number for HTTP server at “www.kth.se” type=SRV
     Incoming mail server for “kth.se”               type=A
     Outgoing mail server for “kth.se”               type=MX
     Authoritative name server for “kth.se”          type=NS
     Web server for “kth.se”                         type=A
     Main (canonical) name for alias “www.kth.se”    type=CNAME
-    Host name with address “130.237.28.40”          type=A
+    Host name with address “130.237.28.40”          type=PTR
     
 P2  D_end-end - end to end delay
     L          - length
