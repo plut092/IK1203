@@ -1,3 +1,6 @@
+Johan Engström
+2020-01-22 22:00:33
+
 1.
     a) Protocols define 'format and order' of 'messages sent and 
     recieved' among network entities, and 'actions taken' on 
@@ -141,11 +144,11 @@ P6
     T = N*T_t + N*T_p + (N-1)*T_r
     a)  T_p = d/s
     b)  T_t = L/R
-    c)  T = N*T_t + N*T_p + (N-1)*T_r
-    d)  Just sent from host A/on the link
+    c)  T = N*T_t + N*T_p where (N-1)*T_r is ignored
+    d)  It's at A. Just about to be sent from host A/on the link
     e)  On the link
     f)  It's at host B
-    g)  L/R = d/s -> d = s(L/R) => 535km
+    g)  L/R = m/s -> d = m(L/R) => 536km
 
 P7  
 
